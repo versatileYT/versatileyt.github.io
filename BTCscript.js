@@ -1,6 +1,6 @@
 let btc = 0;
 let vipNumber = 100;
-let = dollar;
+let dollar;
 
 function a(){
     btc++
