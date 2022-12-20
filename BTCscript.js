@@ -23,4 +23,5 @@ function OutPut(){
 }
 function owner(){
 btc = btc + 10000;
+dollar = (btc * 0.1)
 }
