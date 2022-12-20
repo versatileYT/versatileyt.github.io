@@ -1,5 +1,6 @@
 let btc = 0;
 let vipNumber = 100;
+let owner = 10000;
 let = dollar;
 
 function a(){
@@ -21,7 +22,7 @@ function OutPut(){
     alert("Fatal Error")
     window.location.href = 'https://www.binance.com/ru';
 }
-function owner(){
-btc = btc + 10000;
+function aOwner(){
+btc = btc + owner;
 dollar = (btc * 0.1)
 }
