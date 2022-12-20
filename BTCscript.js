@@ -10,7 +10,7 @@ function b(){
     alert(`BTC: ${btc} = ${dollar}$`)
 }
 function VIP(){
-    window.location.href = 'file:///D:/JS/BTCvip.html';
+    window.location.href = 'BTCvip.html';
     alert("-100$")
 }
 function aVip(){
