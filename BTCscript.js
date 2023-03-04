@@ -1,10 +1,10 @@
 let btc = 0;
 let vipNumber = 100;
-let = dollar;
+let dollar;
 
 function a(){
     btc++
-  dollar = (btc * 0.1)
+  dollar = Math.floor(btc * 0.1)
 };
 function b(){
     alert(`BTC: ${btc} = ${dollar}$`)
