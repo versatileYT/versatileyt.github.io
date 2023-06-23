@@ -73,7 +73,44 @@
            64)Dw i'n dy garu di</b> </h1> </pre>
            
            <img id="img" src="https://ltdfoto.ru/images/2023/06/14/Screenshot_62.png" ></img>
-           
+           <img id="car" align="right" src="https://o.remove.bg/downloads/5a009dc3-fb6d-43b8-abf5-18f127d15ec6/front-5-1024x520-removebg-preview.png" ></img>
+            <script> 
+             $("#car").hide().slideDown(7000).fadeIn(8000)
+            </script>
+        
+        <h1>До нашей встечи:</h1>
+
+<p id="demo"></p>
+
+<script>
+// Установите дату, до которой мы ведем обратный отсчет
+var countDownDate = new Date("June 24, 2023 19:00:00").getTime();
+
+// Обновляйте обратный отсчет каждые 1 секунду
+var x = setInterval(function() {
+
+  // Получить сегодняшнюю дату и время
+  var now = new Date().getTime();
+    
+  // Найдите расстояние между моментом сейчас и датой обратного отсчета
+  var distance = countDownDate - now;
+    
+  // Расчеты времени для дней, часов, минут и секунд
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Выведите результат в виде элемента с id="demo"
+  document.getElementById("demo").innerHTML = days + "д " + hours + "ч "
+  + minutes + "м " + seconds + "с ";
+    
+  // Если обратный отсчет закончился, напишите какой-нибудь текст
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
 </body>
 
 </html>
