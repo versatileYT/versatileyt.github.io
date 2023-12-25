@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+        <title>I LOVE U VERA <3</title>
+        <style>
+            .btn1 {
+                cursor: pointer;
+                background-color: pink;
+                color: red;
+                position: absolute;
+                bottom: 500px;
+                right: 1000px;
+            }
+           
+           
+        </style>
+    </head>
+    <body>
+        <h1 id="print">HELLO WORLD<h1>
+            <h1 id="txt"></h1>
+           <a> <img onclick="a()" align="right" id="img1" src="https://media.istockphoto.com/id/1053404714/photo/birthday-gift-christmas-present-red-box-isolated-on-white.jpg?s=612x612&w=0&k=20&c=w4bmeYI41LC8pcn_5Nw5e2oHoPD-8bx_XPNCfmymLFQ="></img> </a>
+           <img id="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png" ></img>
+           <img id="img2" align="right" src="https://flowersmagic.by/images/stories/virtuemart/product/resized/roses_bouquet_ljubov_460x.jpg"></img>
+        <script>
+              $("#print").hide().text("I LOVE YOU!").fadeIn(1000)
+              $("#txt").hide().text('ЛЮБИМАЯ, 7 МЕСЯЦЕВ!!!!!! ПОЧТИ ГОД ЁПТ').fadeIn(5000)
+              $("#img").hide().slideDown(5000).fadeIn(5000)
+              $("#img1").hide().slideDown(10000).css('cursor', 'pointer')
+              $("#img2").hide().slideDown(5000).fadeIn(6000)
+             var a = function () {
+                window.location.href = "happy(i love).html";
+              }
+        </script>
+        
+    </body>
+</html>
