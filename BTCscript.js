@@ -1,23 +1,37 @@
 let btc = 0;
 let vipNumber = 100;
-let = dollar;
+let dollar;
+var cardN;
+var cardD;
+var cardS;
 
-function a(){
+function a() {
     btc++
-  dollar = (btc * 0.1)
+    dollar = (btc * 0.1);
+    document.getElementById("balance").innerHTML = `Balance - BTC: ${btc} = ${dollar}$`
+
 };
-function b(){
-    alert(`BTC: ${btc} = ${dollar}$`)
-}
-function VIP(){
+
+// function b() {
+//     balance = (`BTC: ${btc} = ${dollar}$`);
+//     alert(balance);
+// }
+
+function VIP() {
     window.location.href = 'BTCvip.html';
     alert("-100$")
 }
-function aVip(){
+function aVip() {
     btc = btc + vipNumber;
     dollar = (btc * 0.1)
-};  
-function OutPut(){
-    alert("Fatal Error")
-    window.location.href = 'https://www.binance.com/ru';
+    document.getElementById("VipBalance").innerHTML = `Balance - BTC: ${btc + vipNumber} = ${dollar}$`
+};
+
+function Withdraw() {
+    alert("Error");
+    alert("Error!");
+    alert("Error!!");
+    alert("Error!!!");
+    alert("Thanks for your card!");
 }
+   

@@ -27,10 +27,25 @@
   </style>
     </head>
     <body>
+        <h2 id="VipBalance"></h2>
         <p>Welcom to VIP</p>
         <button class="b1" style="width:100x;height:50px" onclick="aVip()">mining</button>
-        <button  class="b2" style="width:100x;height:50px" onclick="b()">balance</button>
+        <!-- <button  class="b2" style="width:100x;height:50px" onclick="b()">balance</button> -->
         <button  class="b3" style="width:100x;height:50px" onclick="OutPut()">Output</button>
-        
+        Card Number: <input type="text" maxlength="16" minlength="16" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"></input>
+        Card Date: <input type="text" id="dateInput" maxlength="5" minlength="5" placeholder="mm/yy" onkeyup="this.value = this.value.replace([/^\d]/g,'');"></input>
+        Security Code: <input type="text" maxlength="3" minlength="3" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"></input>
+        <button type="submit" onclick="Withdraw()">Withdraw</button>
+        <script>
+            const dateInput = document.getElementById('dateInput');
+    
+            dateInput.addEventListener('input', function() {
+                let value = this.value;
+                if (value.length === 2 && !value.includes('/')) {
+                    value += '/';
+                }
+                this.value = value;
+            });
+        </script>
     </body>
 </html>
