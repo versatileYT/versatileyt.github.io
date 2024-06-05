@@ -1,30 +1,46 @@
-function showDetails(button) {
-    var accountInfo = button.previousElementSibling.innerText;
-    alert("Account Details: " + accountInfo);
-}
+document.addEventListener("DOMContentLoaded", function() {
+    // Здесь можно выполнять инициализацию или другие действия после загрузки DOM
 
-function purchaseCar(button) {
-    var modal = document.getElementById('purchaseModal');
-    modal.style.display = "block";
+    // Пример данных о счетах пользователя (замените на реальные данные)
+    var accountsData = [
+        { name: "Main Account", balance: 12500.00 },
+        { name: "Savings Account", balance: 50000.00 }
+    ];
 
-    var closeButton = document.querySelector('.close');
-    closeButton.onclick = function() {
-        modal.style.display = "none";
-    }
+    // Функция для загрузки данных о счетах и отображения в модальном окне
+    function loadAccountsModal() {
+        var accountList = document.getElementById("accountList");
+        accountList.innerHTML = "";
 
-    window.onclick = function(event) {
-        if (event.target == modal) {
+        accountsData.forEach(function(account) {
+            var listItem = document.createElement("li");
+            listItem.classList.add("accountItem");
+            listItem.innerHTML = `<strong>${account.name}:</strong> $${account.balance.toFixed(2)}`;
+            accountList.appendChild(listItem);
+        });
+
+        // Отображаем модальное окно с данными о счетах
+        var modal = document.getElementById('accountModal');
+        modal.style.display = "block";
+
+        // Настройка закрытия модального окна
+        var closeButton = document.querySelector('#accountModal .close');
+        closeButton.onclick = function() {
             modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
     }
 
-    button.disabled = true;
-    button.innerText = "Purchased";
-}
-
-window.onclick = function(event) {
-    var modal = document.getElementById('purchaseModal');
-    if (event.target == modal) {
-        modal.style.display = "none";
+    // Загрузка данных о счетах при переходе на вкладку "My Accounts"
+    var myAccountsTab = document.getElementById("myAccounts");
+    if (myAccountsTab) {
+        myAccountsTab.addEventListener("click", function() {
+            loadAccountsModal();
+        });
     }
-}
+});
