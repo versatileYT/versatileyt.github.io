@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF8">
+    <title>My Bank</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Bank</h1>
+        <nav>
+            <ul>
+                <li><a href="#">My Accounts</a></li>
+                <li><a href="#">Transfers</a></li>
+                <li><a href="#">Payments</a></li>
+                <li><a href="#">Investments</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="balance">
+            <h2>Total Balance: <span id="totalBalance">$12,500,000,000,000,050,000</span></h2>
+        </section>
+        <section id="accounts">
+            <h3>Accounts:</h3>
+            <div class="account">
+                <p>Main Account: <span class="balance">$12,500,000,000,000,000,000</span></p>
+                <button onclick="showDetails(this)">Details</button>
+            </div>
+            <div class="account">
+                <p>Savings Account: <span class="balance">$50,000.00</span></p>
+                <button onclick="showState(this)">Details</button>
+            </div>
+        </section>
+        <section id="shop">
+            <h3>Cars for Sale:</h3>
+            <div class="product">
+                <img src="https://99px.ru/sstorage/53/2018/12/tmb_245913_920286.jpg" alt="Car 1">
+                <p>$100,000,000</p>
+                <button onclick="purchaseCar(this)">Buy</button>
+            </div>
+            <div class="product">
+                <img src="https://40.img.avito.st/image/1/1.jj5YO7aDItc2k8LdSFXGFyGZINHmkPjeDJAg1eCGIt3MlBgd75g.15nuscOEEe6Nrg8q0WH9dPKCseoz8tlJlShFWW5INsA" alt="Car 2">
+                <p>$1,500,000</p>
+                <button onclick="purchaseCar(this)">Buy</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Thank you for your purchase!</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
