@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Пример данных о счетах пользователя (замените на реальные данные)
     var accountsData = [
-        { name: "Main Account", balance: 12500.00 },
+        { name: "Main Account", balance: 12,500,000,000,000 },
         { name: "Savings Account", balance: 50000.00 }
     ];
 
