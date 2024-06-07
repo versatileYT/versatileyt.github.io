@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF8">
+    <meta charset="UTF-8">
     <title>My Bank</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -29,7 +29,7 @@
             </div>
             <div class="account">
                 <p>Savings Account: <span class="balance">$50,000</span></p>
-                <button onclick="showState(this)">Details</button>
+                <button onclick="showDetails(this)">Details</button>
             </div>
         </section>
         <section id="shop">
@@ -54,6 +54,16 @@
         </div>
     </div>
     
+    <div id="accountModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>My Accounts</h2>
+            <ul id="accountList">
+                <!-- Account data will be loaded here -->
+            </ul>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
